@@ -1,0 +1,67 @@
+.c-red {
+    color: red !important;
+}
+
+.c-blue {
+    color: blue !important;
+}
+
+.c-green {
+    color: green !important;
+}
+
+.c-orange {
+    color: orange !important;
+}
+
+.c-yellow {
+    color: yellow !important;
+}
+
+.c-white {
+    color: white !important;
+}
+
+
+
+.b-red {
+    background: red !important;
+}
+
+.b-blue {
+    background: blue !important;
+}
+
+.b-green {
+    background: green !important;
+}
+
+.b-orange {
+    background: orange !important;
+}
+
+.b-yellow {
+    background: yellow !important;
+}
+
+.b-white {
+    background: white !important;
+}
+
+.b-alert {
+    background: red;
+    animation-name: color;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes color {
+    0% {
+      background-color: red;
+    }
+    50% {
+      background-color: orange;
+    }
+    100% {
+      background-color: red;
+    }
+  }

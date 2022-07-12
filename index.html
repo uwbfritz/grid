@@ -8,6 +8,11 @@
     <title></title>
 
     <link rel="stylesheet" href="css/grid.css">
+    
+    <!-- JQuery UI-->
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/ccb5c60b64.js" crossorigin="anonymous"></script>
@@ -36,11 +41,12 @@
 
         </div>
 
-
         <div class="sidemenu">
             <div class="smlogo">
-                <i class="fa-solid fa-meteor fa-lg"></i>
+                <!-- <i class="fa-solid fa-meteor fa-lg"></i>  -->
+                <img src="img/w.png" alt="" width="50px">
             </div>
+            <div id="basic" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">servers</div>
             <div id="text" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">
                 Text
             </div>
@@ -62,6 +68,102 @@
         </div>
 
         <div class="main">
+
+
+
+            <div id="basic_content" class="main__container col-10 row-8">
+                <div class="main__container-head">
+                    Server Report
+                </div>
+                <div class="main__container-text">
+                    Current server status - Web and Database Services
+                </div>
+                <div class="main__container-subhead">
+                    Servers
+                </div>
+                <table class="main__container-table-h">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <tr>
+                        <th width="60%">Server</th>
+                        <th>Status</th>
+                        <th>Ping (MS)</th>
+                    </tr>
+                    <tr>
+                        <td>drupal1.tacoma.uw.edu</td>
+                        <td style="color: green;">OFFLINE</td>
+                        <td>12ms</td>
+                    </tr>
+                    <tr>
+                        <td>drupal2.tacoma.uw.edu</td>
+                        <td style="color: green;">ONLINE</td>
+                        <td>14ms</td>
+                    </tr>
+                    <tr>
+                        <td>drupal3.tacoma.uw.edu</td>
+                        <td style="color: red;">OFFLINE</td>
+                        <td>16ms</td>
+                    </tr>
+                    <tr>
+                        <td>drupal4.tacoma.uw.edu</td>
+                        <td style="color: green;">ONLINE</td>
+                        <td>8ms</td>
+                    </tr>
+                </table>
+                <div class="main__container-subhead">
+                    server history
+                </div>
+                <div class="table-head">
+                    <span class="table-icon b-green c-white">D1</span>
+                    <span class="table-head-text">Drupal1.tacoma.uw.edu is back online after a 46 minute outage.</span>
+                </div>
+                <table class="main__container-table-v">
+                    <tr>
+                        <th style="width: 15%;">Host</th>
+                        <td>uwtvh31.tacoma.uw.edu</td>
+                    </tr>
+                    <tr>
+                        <th>IP Address</th>
+                        <td>128.208.252.209</td>
+                    </tr>
+                    <tr>
+                        <th>Server Room</th>
+                        <td>WG 210</td>
+                    </tr>
+                    <tr>
+                        <th>Function</th>
+                        <td>Full LAMP stack</td>
+                    </tr>
+                </table>
+                <div class="table-head">
+                    <span class="table-icon b-alert c-white">D3</span>
+                    <span class="table-head-text">Drupal3.tacoma.uw.edu has been offline for 41 minutes.</span>
+                </div>
+                <table class="main__container-table-v">
+                    <tr>
+                        <th style="width: 15%;">Host</th>
+                        <td>uwtvh32.tacoma.uw.edu</td>
+                    </tr>
+                    <tr>
+                        <th>IP Address</th>
+                        <td>128.208.252.202</td>
+                    </tr>
+                    <tr>
+                        <th>Server Room</th>
+                        <td>WG 210</td>
+                    </tr>
+                    <tr>
+                        <th>Function</th>
+                        <td>MySQL Database Server</td>
+                    </tr>
+                </table>
+            </div>
+
+
+
             <div id="text_content" class="main__container col-6 row-4">
                 <div class="main__container-head">
                     TEXT ONLY
@@ -178,7 +280,7 @@
                 </div>
             </div>
 
-            <div id="bar_content" class="main__container col-6 row-5">
+            <div id="bar_content" class="main__container col-8 row-6">
                 <div class="main__container-head">
                     BAR CHART
                 </div>

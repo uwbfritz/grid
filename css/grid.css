@@ -119,15 +119,8 @@ body {
   line-height: 1.5;
 }
 
-/*
-.sidemenu__item:hover {
-    border-right: 2px solid green;
-    text-shadow: 0 0 10px #F7A600;
-    box-shadow: 0 0 3px #F7A600;
-}
-*/
 .sidemenu__sidetext {
-  transform: rotate(90deg);
+  transform: rotate(270deg);
   color: #f7a500;
   font-size: 32px;
   font-weight: bold;
@@ -137,6 +130,42 @@ body {
   grid-row: 23;
   margin-right: 3px;
   align-self: start;
+}
+
+.saturate {
+  filter: saturate(3);
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.contrast {
+  filter: contrast(160%);
+}
+
+.brightness {
+  filter: brightness(0.25);
+}
+
+.blur {
+  filter: blur(3px);
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.sepia {
+  filter: sepia(100%);
+}
+
+.huerotate {
+  filter: hue-rotate(180deg);
+}
+
+.rss.opacity {
+  filter: opacity(50%);
 }
 
 .main {
@@ -482,4 +511,86 @@ td:hover {
 
 .row-30 {
   grid-row: span 30;
+}
+
+.c-red {
+  color: red !important;
+}
+
+.c-blue {
+  color: blue !important;
+}
+
+.c-green {
+  color: green !important;
+}
+
+.c-orange {
+  color: orange !important;
+}
+
+.c-yellow {
+  color: yellow !important;
+}
+
+.c-white {
+  color: white !important;
+}
+
+.b-red {
+  background: red !important;
+}
+
+.b-blue {
+  background: blue !important;
+}
+
+.b-green {
+  background: green !important;
+}
+
+.b-orange {
+  background: orange !important;
+}
+
+.b-yellow {
+  background: yellow !important;
+}
+
+.b-white {
+  background: white !important;
+}
+
+.b-alert {
+  background: red;
+  -webkit-animation-name: color;
+          animation-name: color;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes color {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes color {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    background-color: red;
+  }
 }/*# sourceMappingURL=grid.css.map */

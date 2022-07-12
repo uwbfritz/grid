@@ -5,12 +5,12 @@ function clicked(){
         tgt = tgt.id + "_content";
         document.getElementById(this.id).classList.remove('sidemenu__item-active')
         document.getElementById(this.id).classList.add('sidemenu__item')
-        document.getElementById(tgt).style.display = "none"
+        $("#" + tgt).hide("slow");
     } else {
         tgt = tgt.id + "_content";
         document.getElementById(this.id).classList.remove('sidemenu__item')
         document.getElementById(this.id).classList.add('sidemenu__item-active')
-        document.getElementById(tgt).style.display = "block"
+        $("#" + tgt).show("slow");
     }
 }
 
