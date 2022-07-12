@@ -1,0 +1,50 @@
+.topmenu {
+    background: transparent;
+    grid-area: top;
+    grid-column: span 1;
+    grid-row: span 1;
+    display: grid;
+    grid-template-columns: repeat(18, 80px);
+    grid-template-rows: 17px;
+    height: 17px;
+    gap: 2px;
+}
+
+.topmenu__menuitem {
+    background: rgb(43, 42, 42);
+    color: rgb(161, 157, 157);
+    margin: 0px 0px 2px 0px;
+    padding-top: 3px;
+    border-right: 2px solid #F7A600;
+    text-align: center;
+    line-height: 1;
+    transition: 0.8s;
+}
+
+.topmenu__menuitem-active {
+    background: rgb(43, 42, 42);
+    color: rgb(161, 157, 157);
+    margin: 0px 0px 2px 2px;
+    padding-top: 3px;
+    border-right: 2px solid rgb(3, 212, 3);
+    text-align: center;
+    line-height: 1;
+    transition: 0.8s;
+}
+
+.topmenu__menuitem:hover {
+    border-right: 2px solid green;
+    text-shadow: 0 0 10px #F7A600;
+    box-shadow: 0 0 3px #F7A600;
+}
+
+.topmenu a {
+    text-decoration: none;
+    color: rgb(161, 157, 157);
+    transition: 0.8s
+}
+
+.topmenu a:hover {
+    color: white;
+    text-shadow: 0 0 10px #F7A600;
+}

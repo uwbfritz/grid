@@ -1,0 +1,29 @@
+// Body and initial wrapper, 30x30
+
+body {
+    background-image: linear-gradient(45deg, #131313 25%, #0f0f0f 25%, #0f0f0f 50%, #131313 50%, #131313 75%, #0f0f0f 75%, #0f0f0f 100%);
+    background-size: 113.14px 113.14px;
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.wrapper {
+    display: grid;
+    width: 100%;
+    height: 98vh;
+    grid-template-areas:
+        "side top"
+        "side main";
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 17px 96vh;
+}
+
+@import "src/topmenu";
+@import "src/sidemenu";
+@import "src/main";
+@import "src/position";
+
+
+
+

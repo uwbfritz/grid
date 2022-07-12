@@ -1,0 +1,67 @@
+
+.sidemenu {
+    background: rgb(58, 57, 57);
+    background: linear-gradient(90deg, #202020 0%, rgb(27, 27, 27) 100%);
+    grid-area: side;
+    display: grid;
+    width: 70px;
+    grid-template-columns: 70px;
+    grid-template-rows: repeat(15, 17px);
+    overflow: auto;
+}
+
+.smlogo {
+    grid-column: span 3;
+    grid-row: span 4;
+    text-align: center;
+    color: orange;
+    opacity: 0.7;
+    margin-top: 20px;
+    font-size: 24px;
+    text-shadow: 0 0 10px #F7A600;
+}
+
+.sidemenu__item {
+    grid-column: span 2;
+    grid-row: span 1;
+    background: rgb(43, 42, 42);
+    color: rgb(161, 157, 157);
+    margin: 0px 0px 2px 0px;
+    border-right: 2px solid #F7A600;
+    text-align: center;
+    gap: 3px;
+    transition: 0.8s;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.sidemenu__item-active {
+    grid-column: span 2;
+    grid-row: span 1;
+    background: rgb(43, 42, 42);
+    color: rgb(161, 157, 157);
+    margin: 0px 0px 2px 0px;
+    border-right: 2px solid rgb(2, 201, 2);
+    text-align: center;
+    gap: 3px;
+    transition: 0.8s;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.sidemenu__sidetext {
+    transform: rotate(90deg);
+    color: #f7a500;
+    font-size: 32px;
+    font-weight: bold;
+    opacity: 0.5;
+    text-shadow: 0 0 10px #b4a078;
+    grid-column: span 1;
+    grid-row: 23;
+    margin-right: 3px;
+    align-self: start;
+}

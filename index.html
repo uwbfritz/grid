@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="css/grid.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ccb5c60b64.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="topmenu">
+            <div class="topmenu__menuitem-active">
+                <a href="/">HOME</a>
+            </div>
+            <div class="topmenu__menuitem">
+                <a href="#">MI2</a>
+            </div>
+            <div class="topmenu__menuitem">
+                <a href="#">MI3</a>
+            </div>
+            <div class="topmenu__menuitem" style="grid-column: 18; width: 80px;">
+                <a href="#">PREFS</a>
+            </div>
+            <div class="topmenu__menuitem" style="grid-column: 19; width: 80px;">
+                <a href="#">LOGOUT</a>
+            </div>
+
+        </div>
+
+
+        <div class="sidemenu">
+            <div class="smlogo">
+                <i class="fa-solid fa-meteor fa-lg"></i>
+            </div>
+            <div id="text" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">
+                Text
+            </div>
+            <div id="horizontal" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">
+                h-table
+            </div>
+            <div id="vertical" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">
+                v-table
+            </div>
+            <div id="line" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">
+                Line
+            </div>
+            <div id="bar" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">
+                Bar
+            </div>
+            <div class="sidemenu__sidetext">
+                WDS
+            </div>
+        </div>
+
+        <div class="main">
+            <div id="text_content" class="main__container col-6 row-4">
+                <div class="main__container-head">
+                    TEXT ONLY
+                </div>
+                <div class="main__container-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+                <div class="main__container-subhead">
+                    subheading
+                </div>
+                <div class="main__container-text">
+                    Some other information.
+                </div>
+            </div>
+
+            <div id="horizontal_content" class="main__container col-12 row-4">
+                <div class="main__container-head">
+                    HORIZONTAL TABLE
+                </div>
+                <div class="main__container-text">
+                    Some text here to describe the table below. This table contains useless information. Woo. Some
+                    text here to describe the table below. This table contains useless information. Woo.
+                    Some text here to describe the table below. This table contains useless information. Woo.
+                </div>
+                <div class="main__container-subhead">
+                    Subhead
+                </div>
+                <table class="main__container-table-h">
+                    <thead>
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>Size</th>
+                            <th>Weight</th>
+                            <th>Volume</th>
+                            <th>Density</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>22.7</td>
+                            <td>201.78</td>
+                            <td>422.83</td>
+                            <td>49.7</td>
+                        </tr>
+                        <tr>
+                            <td>21.79</td>
+                            <td>138.79</td>
+                            <td>501.96</td>
+                            <td>66.15</td>
+                        </tr>
+                        <tr>
+                            <td>62.19</td>
+                            <td>411.12</td>
+                            <td>108.65</td>
+                            <td>974.16</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="vertical_content" class="main__container col-12 row-4">
+                <div class="main__container-head">
+                    VERTICAL TABLE
+                </div>
+                <div class="main__container-text">
+                    This is some descriptive text about the table below.
+                </div>
+                <div class="main__container-subhead">subhead</div>
+                <div class="table-head">
+                    <span class="table-icon">DF</span>
+                    <span class="table-head-text">Individual item-level detail.</span>
+                </div>
+                <table class="main__container-table-v">
+                    <tr>
+                        <th style="width: 15%;">Size</th>
+                        <td>209.74</td>
+                    </tr>
+                    <tr>
+                        <th>Weight</th>
+                        <td>127.64</td>
+                    </tr>
+                    <tr>
+                        <th>Volume</th>
+                        <td>422.64</td>
+                    </tr>
+                    <tr>
+                        <th>Density</th>
+                        <td>446.74</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="line_content" class="main__container col-10 row-7">
+                <div class="main__container-head">
+                    LINE CHART
+                </div>
+                <div class="main__container-text">
+                    This chart depicts the size of each object.
+                </div>
+                <div class="main__container-subhead">
+                    OBJECT DETAIL
+                </div>
+                <div class="main__container-chart">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+
+            <div id="bar_content" class="main__container col-6 row-5">
+                <div class="main__container-head">
+                    BAR CHART
+                </div>
+                <div class="main__container-text">
+                    This chart represents the population by continent.
+                </div>
+                <div class="main__container-subhead">
+                    population (millions)
+                </div>
+                <div class="main__container-chart">
+                    <canvas id="bar-chart"></canvas>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
+        integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
