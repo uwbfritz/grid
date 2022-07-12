@@ -38,6 +38,25 @@
     margin: 10px;
 }
 
+.main__container-text a {
+    color: #f7a500a9;
+    text-decoration: none;
+}
+
+.main__container-text ul {
+    list-style-type: square;
+}
+
+.main__container-image {
+    text-align: center;
+}
+
+.main__container-image-footnote {
+    text-align: center;
+    color: #acbab98c;
+    font-style: italic;
+}
+
 .main__container-table-h {
     font-size: 10px;
     border: 1px solid #46616b;

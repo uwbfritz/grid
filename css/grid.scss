@@ -5,7 +5,7 @@ body {
     background-size: 113.14px 113.14px;
     font-size: 11px;
     font-family: 'Roboto', sans-serif;
-
+    overflow: auto;
 }
 
 .wrapper {
@@ -23,8 +23,5 @@ body {
 @import "src/sidemenu";
 @import "src/main";
 @import "src/position";
-@import "src/colors"
-
-
-
-
+@import "src/colors";
+@import "src/datatables";
