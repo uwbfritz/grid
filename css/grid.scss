@@ -5,7 +5,6 @@ body {
     background-size: 113.14px 113.14px;
     font-size: 11px;
     font-family: 'Roboto', sans-serif;
-    overflow: auto;
 }
 
 .wrapper {
@@ -17,6 +16,7 @@ body {
         "side main";
     grid-template-columns: 70px 1fr;
     grid-template-rows: 17px 96vh;
+    overflow: auto;
 }
 
 @import "src/topmenu";
