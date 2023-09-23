@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-
-
+    <title>Style Guide</title>
 
     <!-- JQuery UI-->
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.12.1/datatables.min.css" />
@@ -23,67 +21,207 @@
 </head>
 
 <body>
-
     <div class="wrapper">
         <div class="topmenu">
-            <div class="topmenu__menuitem">
+            <div class="topmenu__menuitem-active">
                 <a href="/">HOME</a>
             </div>
-            <div class="topmenu__menuitem-active">
-                <a href="#">STYLE</a>
-            </div>
             <div class="topmenu__menuitem">
-                <a href="#">MI3</a>
+                <a href="style.html">STYLES</a>
             </div>
-            <div class="topmenu__menuitem" style="grid-column: 18; width: 80px;">
+            <!-- <div class="topmenu__menuitem">
+                <a href="#">TESTBED</a>
+            </div> -->
+            <!-- <div class="topmenu__menuitem" style="grid-column: 18; width: 80px;">
                 <a href="#">PREFS</a>
-            </div>
+            </div> -->
             <div class="topmenu__menuitem" style="grid-column: 19; width: 80px;">
-                <a href="#">LOGOUT</a>
+                <a href="/Shibboleth.sso/Logout">LOGOUT</a>
             </div>
 
         </div>
 
         <div class="sidemenu">
             <div class="smlogo">
-                <!-- <i class="fa-solid fa-meteor fa-lg"></i>  -->
                 <img src="img/w.png" alt="" width="50px">
             </div>
-            <div id="basic" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">styles</div>
-
+            <div id="positional" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">Layout</div>
+            <div id="menus" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">Menu</div>
+            <div id="containers" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">Container</div>
+            <div id="colors" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">Color</div>
+            <div id="hierarchy" class="sidemenu__item-active" onclick="javascript:clicked.call(this)">Hierarchy</div>
             <div class="sidemenu__sidetext">
-                WDS
+                DBX
             </div>
         </div>
 
         <div class="main">
-            <div id="basic_content" class="main__container col-9 row-10">
+
+            <div id="positional_content" class="main__container col-8 row-5">
                 <div class="main__container-head">
-                    main area content
+                    Layout/Position
                 </div>
                 <div class="main__container-text">
-
-                    <h3>Classes</h3>
-                    <ul>
-                        <li><u>main__container:</u> must be called with col-xx row-xx for sizing.</li>
-                        <li><u>main__container-head:</u> container header with background color.</li>
-                        <li><u>main__container-subhead:</u> subheading with background, washed out text color.</li>
-                        <li><u>main__container-text:</u> basic text box with padding, colorization.</li>
-                        <li><u>main__container-table-h:</u> table formatting for horizontal tables.</li>
-                        <li><u>main__container-table-v:</u> table formatting for vertical tables.</li>
-                        <li><u>main__container-image:</u> center formatted image.</li>
-                        <li><u>main__container-image-footnote:</u> italicized, muted text for below image.</li>
-                    </ul>
-                    <h3>Positioning</h3>
-                    <ul>
-                        <li><u>col-xx:</u> grid column span number - each column 50px, 30 columns in total.</li>
-                        <li><u>row-xx:</u> grid row span number - each row 50px, 30 rows in total.</li>
-                        <li><u>pX-X:</u> padding - px, py, pt, pb, 1-5. ex. pt-4</li>
-                    </ul>
-                    <h3>Colorization</h3>
-                    <ul>
-                        <li>Background</li>
+                    Listed below are the main classes used in the layout of this theme.
+                </div>
+                <div class="main__container-subhead">
+                    Positional classes
+                </div>
+                <div class="main__container-text">
+                    <table class="main__container-table-h">
+                        <tr>
+                            <th>Type</th>
+                            <th>Class</th>
+                        </tr>
+                        <tr>
+                            <td width="20%">Column</td>
+                            <td>col-6</td>
+                        </tr>
+                        <tr>
+                            <td>Column</td>
+                            <td>col-8</td>
+                        </tr>
+                        <tr>
+                            <td>Column</td>
+                            <td>col-10</td>
+                        </tr>
+                        <tr>
+                            <td>Column</td>
+                            <td>col-12</td>
+                        </tr>
+                        <tr>
+                            <td>Row</td>
+                            <td>row-4</td>
+                        </tr>
+                        <tr>
+                            <td>Row</td>
+                            <td>row-6</td>
+                        </tr>
+                        <tr>
+                            <td>Row</td>
+                            <td>row-8</td>
+                        </tr>
+                        <tr>
+                            <td>Padding</td>
+                            <td>p-x, p-y, p-t, p-b (1-5)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="menus_content" class="main__container col-8 row-5">
+                <div class="main__container-head">
+                    Top Menu/Sidebar
+                </div>
+                <div class="main__container-text">
+                    Listed below are the main classes used in the layout of this theme for the top navigation and
+                    sidebar.
+                </div>
+                <div class="main__container-subhead">
+                    Menu classes
+                </div>
+                <div class="main__container-text">
+                    <table class="main__container-table-h">
+                        <tr>
+                            <th>Type</th>
+                            <th>Class</th>
+                        </tr>
+                        <tr>
+                            <td width="35%">Top menu instantiation</td>
+                            <td>topmenu</td>
+                        </tr>
+                        <tr>
+                            <td>Top menu item</td>
+                            <td>topmenu__menuitem</td>
+                        </tr>
+                        <tr>
+                            <td>Top menu active decorator</td>
+                            <td>topmenu__menuitem-active</td>
+                        </tr>
+                        <tr>
+                            <td>Side menu instantiation</td>
+                            <td>sidemenu</td>
+                        </tr>
+                        <tr>
+                            <td>Side menu item</td>
+                            <td>sidemenu__sidetext</td>
+                        </tr>
+                        <tr>
+                            <td>Side menu active decorator</td>
+                            <td>sidemenu__item-active</td>
+                        </tr>
+                        <tr>
+                            <td>Logo</td>
+                            <td>smlogo</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="containers_content" class="main__container col-12 row-6">
+                <div class="main__container-head">
+                    Main Containers
+                </div>
+                <div class="main__container-text">
+                    Listed below are the main classes used in the layout of this theme for the containment of content.
+                </div>
+                <div class="main__container-subhead">
+                    Container classes
+                </div>
+                <div class="main__container-text">
+                    <table class="main__container-table-h">
+                        <tr>
+                            <th>Type</th>
+                            <th>Class</th>
+                        </tr>
+                        <tr>
+                            <td width="35%">Top level container (required)</td>
+                            <td>wrapper</td>
+                        </tr>
+                        <tr>
+                            <td>Main content wrapper (required after nav)</td>
+                            <td>main</td>
+                        </tr>
+                        <tr>
+                            <td>External wrapper for individual container item. (required)</td>
+                            <td>main__container</td>
+                        </tr>
+                        <tr>
+                            <td>Main container header</td>
+                            <td>main__container-head</td>
+                        </tr>
+                        <tr>
+                            <td>Main container subhead</td>
+                            <td>main__container-subhead</td>
+                        </tr>
+                        <tr>
+                            <td>Horizontal table header</td>
+                            <td>main__container-table-h</td>
+                        </tr>
+                        <tr>
+                            <td>Table header</td>
+                            <td>table-head</td>
+                        </tr>
+                        <tr>
+                            <td>Image</td>
+                            <td>main__container-image</td>
+                        </tr>
+                        <tr>
+                            <td>Image footnote</td>
+                            <td>main__container-image-footnote</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="colors_content" class="main__container col-8 row-7">
+                <div class="main__container-head">
+                    Colors
+                </div>
+                <div class="main__container-text">
+                    Predefined color scheme (classes)
+                </div>
+                <div class="main__container-subhead">Background</div>
+                <div class="main__container-text">
                         <ul>
+                            <li>b-alert (flashing)</li>
                             <li>b-red</li>
                             <li>b-blue</li>
                             <li>b-green</li>
@@ -91,27 +229,102 @@
                             <li>b-orange</li>
                             <li>b-white</li>
                         </ul>
-                        <li>Foreground</li>
-                        <ul>
-                            <li>c-red</li>
-                            <li>c-blue</li>
-                            <li>c-green</li>
-                            <li>c-yellow</li>
-                            <li>c-orange</li>
-                            <li>c-white</li>
-                        </ul>
+                </div>
+                <div class="main__container-subhead">Foreground</div>
+                <div class="main__container-text">
+                    <ul>
+                        <li>c-red</li>
+                        <li>c-blue</li>
+                        <li>c-green</li>
+                        <li>c-yellow</li>
+                        <li>c-orange</li>
+                        <li>c-white</li>
                     </ul>
                 </div>
-
+            </div>
+            <div id="hierarchy_content" class="main__container col-16 row-5">
+                <div class="main__container-head">
+                    Hierarchy
+                </div>
+                <div class="main__container-text">
+                    The template structure hierarchy
+                </div>
+                <div class="main__container-subhead">
+                    Hierarchy of a page
+                </div>
+                <div class="main__container-text">
+                    <table class="main__container-table-h">
+                        <tr>
+                            <th>Base</th>
+                            <th>Level 1</th>
+                            <th>Level 2</th>
+                            <th>Level 3</th>
+                        </tr>
+                        <tr>
+                            <td class="c-red">wrapper</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="c-yellow">topmenu</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="c-yellow">sidemenu</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="c-yellow">main</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="c-orange">main__container</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="c-green">main__container-*</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="c-green">main__container-table-h</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="c-green">table-head</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
-
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
-        integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/nav.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#example').DataTable({
+                    "pageLength": 5,
+                    "lengthMenu": [5, 10, 15, 20]
+                });
+            }); 
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
+            integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/index.js"></script>
+        <script src="js/nav.js"></script>
 </body>
 
 </html>
